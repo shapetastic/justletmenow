@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Let Me Now — Property Renovation & Rental</title>
+  <meta name="description" content="Just Let Me Now — a family-run property renovation and rental company. We transform tired houses into homes worth living in. See our before &amp; after." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Just Let Me Now — Property Renovation & Rental" />
+  <meta property="og:description" content="We transform tired houses into homes worth living in. See our first renovation before &amp; after." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.justletmenow.com/" />
+  <meta property="og:image" content="https://www.justletmenow.com/assets/after.jpg" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <span aria-hidden="true">🏡</span>
+        <span class="full">Just Let Me Now<span class="dot">.</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Our Work</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Renovation &amp; Rental</p>
+      <h1>Tired houses, turned into homes worth living in.</h1>
+      <p class="lead">Just Let Me Now is a family-run property company. We buy, renovate and rent
+        homes across South Wales — doing the job properly, start to finish.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#work">See our first renovation</a>
+        <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>What we do</h2>
+        <p>Two brothers with a simple belief: every property deserves care, and every tenant
+          deserves a home they're proud of.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="ico" aria-hidden="true">🔨</div>
+          <h3>Full renovations</h3>
+          <p>From dated and neglected to fresh and functional — we manage the whole transformation
+            with an eye for quality and detail.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🔑</div>
+          <h3>Rental &amp; letting</h3>
+          <p>Once a home is ready, we let and look after it properly — reliable, responsive and
+            fair for tenants.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">📍</div>
+          <h3>Local &amp; hands-on</h3>
+          <p>We're on the ground in South Wales, personally involved in every project we take on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section id="work" class="alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Before &amp; After</h2>
+        <p>Our first project — 556 Llangyfelach Road. Tap play to see the transformation for
+          yourself.</p>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-item before">
+          <span class="tag">Before</span>
+          <video controls preload="none" poster="assets/before.jpg" playsinline>
+            <source src="assets/before.mp4" type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
+          <p class="ba-caption">How we found it.</p>
+        </div>
+        <div class="ba-item after">
+          <span class="tag">After</span>
+          <video controls preload="none" poster="assets/after.jpg" playsinline>
+            <source src="assets/after.mp4" type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
+          <p class="ba-caption">How we left it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Have a property, or looking to rent?</h2>
+      <p>We'd love to hear from you. It's a quick, friendly conversation — no pressure.</p>
+      <div style="margin-top:22px;">
+        <a class="btn" href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Just Let Me Now<span class="dot">.</span></div>
+          <p style="margin-top:8px; color:#aebfb8;">Property renovation &amp; rental, South Wales.</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px;"><strong>Call:</strong> <a href="tel:+447932477585">07932 477585</a></p>
+          <p style="margin:0 0 6px;"><strong>Email:</strong> <a href="mailto:ashacks@gmail.com">ashacks@gmail.com</a></p>
+          <p style="margin:0;"><a href="contact.html">Contact form →</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year">2026</span> Just Let Me Now. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

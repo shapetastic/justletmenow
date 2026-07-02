@@ -1,0 +1,35 @@
+name: Deploy to FTP
+
+# Publishes the site to the web host on every push to main.
+# Credentials come from repository Secrets (Settings → Secrets and variables → Actions):
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:   # allows a manual re-deploy from the Actions tab
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          # Don't publish repo plumbing, docs, or source-only files to the live site.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md
+            ftpdetails.txt
+            556Llangyfelchrdbefore.mp4
+            556Llangyfelchrdafter.mp4

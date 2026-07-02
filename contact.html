@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Just Let Me Now</title>
+  <meta name="description" content="Get in touch with Just Let Me Now — property renovation and rental in South Wales. Call 07932 477585 or send us a message." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <span aria-hidden="true">🏡</span>
+        <span class="full">Just Let Me Now<span class="dot">.</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#work">Our Work</a>
+        <a href="index.html#about">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Get in touch</h2>
+        <p>Whether you've a property to renovate, a home to let, or you're looking to rent — we'd
+          love to hear from you.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <div class="line"><span class="ico" aria-hidden="true">📞</span>
+            <a href="tel:+447932477585">07932 477585</a></div>
+          <div class="line"><span class="ico" aria-hidden="true">✉️</span>
+            <a href="mailto:ashacks@gmail.com">ashacks@gmail.com</a></div>
+          <div class="line"><span class="ico" aria-hidden="true">📍</span>
+            South Wales</div>
+          <p style="color:var(--ink-soft); margin-top:22px;">Prefer email? You can reach us
+            directly at
+            <a href="mailto:ashacks@gmail.com?subject=Enquiry%20from%20justletmenow.com">ashacks@gmail.com</a>
+            and we'll get back to you as soon as we can.</p>
+        </div>
+
+        <form class="contact-form" method="post" action="contact.php" id="form">
+          <div id="alert-ok" class="alert ok" style="display:none;">
+            Thanks — your message has been sent. We'll be in touch soon.
+          </div>
+          <div id="alert-err" class="alert err" style="display:none;">
+            Sorry, something went wrong. Please call us on 07932 477585 or email
+            <a href="mailto:ashacks@gmail.com">ashacks@gmail.com</a> directly.
+          </div>
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <!-- Honeypot: hidden from humans, tempting to bots -->
+          <div class="hp" aria-hidden="true">
+            <label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-note">We'll only use your details to reply to your enquiry.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Just Let Me Now<span class="dot">.</span></div>
+          <p style="margin-top:8px; color:#aebfb8;">Property renovation &amp; rental, South Wales.</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px;"><strong>Call:</strong> <a href="tel:+447932477585">07932 477585</a></p>
+          <p style="margin:0 0 6px;"><strong>Email:</strong> <a href="mailto:ashacks@gmail.com">ashacks@gmail.com</a></p>
+          <p style="margin:0;"><a href="index.html">← Back home</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year">2026</span> Just Let Me Now. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Show success / error banner based on where contact.php redirected us.
+    var q = new URLSearchParams(window.location.search);
+    if (q.get('sent') === '1') {
+      document.getElementById('alert-ok').style.display = 'block';
+      document.getElementById('form').scrollIntoView();
+    } else if (q.get('error')) {
+      document.getElementById('alert-err').style.display = 'block';
+      document.getElementById('form').scrollIntoView();
+    }
+  </script>
+</body>
+</html>

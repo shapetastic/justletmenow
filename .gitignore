@@ -1,0 +1,11 @@
+# Never commit FTP / hosting credentials — these live in GitHub Secrets instead.
+ftpdetails.txt
+
+# Original high-resolution source videos (the web-optimised copies in /assets are deployed).
+556Llangyfelchrdbefore.mp4
+556Llangyfelchrdafter.mp4
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
