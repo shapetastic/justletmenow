@@ -5,6 +5,9 @@ ftpdetails.txt
 556Llangyfelchrdbefore.mp4
 556Llangyfelchrdafter.mp4
 
+# Local working screenshots / images, not part of the site
+screens/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
