@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.justletmenow.com/sitemap.xml
+Sitemap: https://justletmenow.co.uk/sitemap.xml

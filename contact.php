@@ -4,7 +4,7 @@
 // back to contact.html with ?sent=1 (success) or ?error=1 (problem).
 
 $TO      = 'ashacks@gmail.com';
-$SUBJECT = 'New enquiry from justletmenow.com';
+$SUBJECT = 'New enquiry from justletmenow.co.uk';
 
 function redirect($qs) {
     header('Location: contact.html?' . $qs);
@@ -37,7 +37,7 @@ $body .= "Name:  $safeName\n";
 $body .= "Email: $safeEmail\n\n";
 $body .= "Message:\n$message\n";
 
-$headers  = "From: Just Let Me Now <noreply@justletmenow.com>\r\n";
+$headers  = "From: Just Let Me Now <noreply@justletmenow.co.uk>\r\n";
 $headers .= "Reply-To: $safeName <$safeEmail>\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
